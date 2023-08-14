@@ -59,20 +59,25 @@ public class ArrayTest {
           switch (menuChoice) {
             case 1:
               JOptionPane.showMessageDialog(null,"End of Program");
-            }
-            if (menuChoice == 99) {
+              
+            
+            case 4:
+              
+              JOptionPane.showMessageDialog(null,"End of Program");
+            
+            case 5:
+              
+              JOptionPane.showMessageDialog(null,"End of Program");
+            
+            case 99:
               choice = false;
               JOptionPane.showMessageDialog(null,"End of Program");
-            }
-            if (menuChoice == 99) {
-              choice = false;
-              JOptionPane.showMessageDialog(null,"End of Program");
-            }
-            if (menuChoice == 99) {
-              choice = false;
-              JOptionPane.showMessageDialog(null,"End of Program");
-            }
-        }
+              break;
+            
+            default:
+              choice = true;
+          }
+          }
     }
     
 }
