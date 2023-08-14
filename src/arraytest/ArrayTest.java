@@ -59,7 +59,7 @@ public class ArrayTest {
           switch (menuChoice) {
             case 1:
               JOptionPane.showMessageDialog(null,"End of Program");
-              
+              break;
             
             case 4:
               
@@ -76,8 +76,8 @@ public class ArrayTest {
             
             default:
               choice = true;
-          }
-          }
+              
+            }
+        }
     }
-    
 }
