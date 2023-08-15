@@ -11,38 +11,73 @@ import java.util.Arrays;
  */
 public class ArrayTest {
     
- 
+    private static int arrayNum[] = new int [10];
+
+    public ArrayTest() {
+    }
+
+    public static int[] getArrayNum() {
+        return arrayNum;
+    }
+    
+    public static void setArrayNum(int[] arrayNum) {
+        ArrayTest.arrayNum = arrayNum;
+    }
+    
     
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         
-         //ArrayTest storedNumber = new ArrayTest();
+         ArrayTest storedNumber = new ArrayTest();
+         //int arrayNum[] = new int [10];
         
-        // Object for the ArrayMethods Class
-        ArrayMethods array = new ArrayMethods();
-         
-        //int arrayNum[] = new int [10];
-        
-        // The arrayNum attribute is set to public in on order to access it globally
-        int arraySize[] = ArrayMethods.arrayNum;
-        
-        for (int i = 0;i < arraySize.length; i++) {
+        for (int i = 0;i < arrayNum.length; i++) {
             int num = Integer.parseInt(JOptionPane.showInputDialog("Please enter an integer: "));
-            //ArrayTest.setArrayNum(arrayNum);
-            ArrayMethods.setArrayNum(i, num);
+            ArrayTest.setArrayNum(arrayNum);
         }
         
-        //int userArray[] = ArrayTest.getArrayNum();
+        int userArray[] = ArrayTest.getArrayNum();
         
-        ArrayMethods.UserChoice();
         
-        ArrayMethods.DisplayInteger();
+        boolean choice = true;
+        // int choice = Integer.parseInt(JOptionPane.showInputDialog(""));
+        //int menuChoice = Integer.parseInt(JOptionPane.showInputDialog(""));
         
-        ArrayMethods.DisplayReverse();
-        
-        ArrayMethods.SumOfIntegers();
-        
+        while (choice) {
+          int menuChoice = Integer.parseInt(JOptionPane.showInputDialog("""
+                                                                        ************************ WOULD YOU LIKE TO ************************
+                                                                        ===================================================================
+                                                                        
+                                                                        1. Display all the integer values 
+                                                                        2. Display all the integers in reverse order
+                                                                        3. Display the sum of the integers
+                                                                        4. Display all the values 
+                                                                        5.
+                                                                        99. End"""));  
+          switch (menuChoice) {
+            case 1:
+              JOptionPane.showMessageDialog(null,"End of Program");
+              break;
+            
+            case 4:
+              
+              JOptionPane.showMessageDialog(null,"End of Program");
+            
+            case 5:
+              
+              JOptionPane.showMessageDialog(null,"End of Program");
+            
+            case 99:
+              choice = false;
+              JOptionPane.showMessageDialog(null,"End of Program");
+              break;
+            
+            default:
+              choice = true;
+              
+            }
+        }
     }
 }
